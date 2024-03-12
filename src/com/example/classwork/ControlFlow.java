@@ -149,15 +149,24 @@ public class ControlFlow {
             return "Zero";
         }
     }
-
+/*8. Vowel or Consonant Checker:
+    Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise.
+     Ignore case sensitivity.*/
+    public static boolean isVowel(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char character = scanner.next().charAt(0);
+        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        for(char vowel : vowels){
+            if(Character.toLowerCase(character) == vowel){
+                return true;
+            }
+        }
+        return false;
+    }
 
              /* {
 
-
-
-8. Vowel or Consonant Checker:
-Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise.
-Ignore case sensitivity.
 
 9. Palindrome Checker:
 Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome
@@ -183,6 +192,8 @@ Write a method called isPalindrome that takes a string as input and returns true
         String checkSign = checkSign();
         System.out.println(checkSign);
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This is a vowel or consonant checker〰️〰️〰️〰️〰️〰️");
+        boolean isVowel = isVowel();
+        System.out.println(isVowel);
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This is a palindrome checker〰️〰️〰️〰️〰️〰️");
 
 
