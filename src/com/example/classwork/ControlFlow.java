@@ -123,13 +123,28 @@ public class ControlFlow {
             return (temperature - 32) * 5/9;
         }
     }
+/*
+7. Number Sign Checker:
+    Write a method called checkSign that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero.
+*/
+    public static String checkSign(){
+        int number;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        number = scanner.nextInt();
+        if(number > 0){
+            return "Positive";
+        }else if(number < 0){
+            return "Negative";
+        }else{
+            return "Zero";
+        }
+    }
 
 
              /* {
 
 
-7. Number Sign Checker:
-Write a method called checkSign that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero.
 
 8. Vowel or Consonant Checker:
 Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise.
@@ -155,6 +170,13 @@ Write a method called isPalindrome that takes a string as input and returns true
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This program to convert temperature〰️〰️〰️〰️〰️〰️");
         double convertTemperature = convertTemperature();
         System.out.println(convertTemperature);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This program checks the sign of a number〰️〰️〰️〰️〰️〰️");
+        String checkSign = checkSign();
+        System.out.println(checkSign);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This is a vowel or consonant checker〰️〰️〰️〰️〰️〰️");
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This is a palindrome checker〰️〰️〰️〰️〰️〰️");
+
+
 
 
     }
