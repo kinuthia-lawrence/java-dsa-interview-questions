@@ -104,12 +104,29 @@ public class ControlFlow {
             return "Not a valid triangle";
         }
     }
+/*
+6. Temperature Converter:
+    Write a method called convertTemperature that takes a temperature in Celsius as input and converts it to Fahrenheit.
+    Include an optional boolean parameter to specify whether the input temperature is in Celsius or Fahrenheit,
+    and return the converted temperature accordingly.(Formula	(1°C × 9/5) + 32 = 33.8°F)
+*/
+    public static double convertTemperature(){
+        double temperature;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the temperature: ");
+        temperature = scanner.nextDouble();
+        System.out.print("Is the temperature in Celsius? (true/false): ");
+        boolean isCelsius = scanner.nextBoolean();
+        if(isCelsius){
+            return (temperature * 9/5) + 32;
+        }else{
+            return (temperature - 32) * 5/9;
+        }
+    }
+
 
              /* {
 
-6. Temperature Converter:
-Write a method called convertTemperature that takes a temperature in Celsius as input and converts it to Fahrenheit.
-Include an optional boolean parameter to specify whether the input temperature is in Celsius or Fahrenheit, and return the converted temperature accordingly.
 
 7. Number Sign Checker:
 Write a method called checkSign that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero.
@@ -135,6 +152,10 @@ Write a method called isPalindrome that takes a string as input and returns true
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This program checks the type of a triangle.〰️〰️〰️〰️〰️〰️");
         String classifyTriangle =classifyTriangle();
         System.out.println(classifyTriangle);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This program to convert temperature〰️〰️〰️〰️〰️〰️");
+        double convertTemperature = convertTemperature();
+        System.out.println(convertTemperature);
+
 
     }
 }
