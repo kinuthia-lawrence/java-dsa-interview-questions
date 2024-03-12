@@ -38,11 +38,20 @@ public class ControlFlow {
         System.out.println("This program checks if an year is a leap year.");
         System.out.print("Enter an year: ");
         year = scanner.nextInt();
-        if(year % 4 == 0 || year % 100 == 0 && year % 400 ==0){
-            return true;
-        }else{
+        int length = String.valueOf(year).length();
+        if (length != 4) {
+            System.out.println("Invalid year!!");
+            isLeapYear();
             return false;
+        }else{
+            if(year % 4 == 0 || year % 100 == 0 && year % 400 ==0){
+                return true;
+            }else{
+                return false;
+            }
         }
+
+
     }
     /*4. Grading System:
     Write a method called calculateGrade that takes a student's score as input and returns a letter grade based on the following grading scale:
