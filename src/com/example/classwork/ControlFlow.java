@@ -78,22 +78,49 @@ public class ControlFlow {
 
     }
 
+/*
+5. Triangle Type Checker:
+    Write a method called classifyTriangle that takes the lengths of three sides of a triangle as input and
+    returns a string indicating the type of triangle (equilateral, isosceles, scalene) or if the inputs do not form a valid triangle.
+*/
+    public static String classifyTriangle(){
+        int side1, side2, side3;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the length of side 1: ");
+        side1 = scanner.nextInt();
+        System.out.print("Enter the length of side 2: ");
+        side2 = scanner.nextInt();
+        System.out.print("Enter the length of side 3: ");
+        side3 = scanner.nextInt();
+        if(side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1){
+            if(side1 == side2 && side2 == side3){
+                return "Equilateral";
+            }else if(side1 == side2 || side2 == side3 || side1 == side3){
+                return "Isosceles";
+            }else{
+                return "Scalene";
+            }
+        }else{
+            return "Not a valid triangle";
+        }
+    }
 
              /* {
-             5. Triangle Type Checker:
-Write a method called classifyTriangle that takes the lengths of three sides of a triangle as input and returns a string indicating the type of triangle (equilateral, isosceles, scalene) or if the inputs do not form a valid triangle.
 
 6. Temperature Converter:
-Write a method called convertTemperature that takes a temperature in Celsius as input and converts it to Fahrenheit. Include an optional boolean parameter to specify whether the input temperature is in Celsius or Fahrenheit, and return the converted temperature accordingly.
+Write a method called convertTemperature that takes a temperature in Celsius as input and converts it to Fahrenheit.
+Include an optional boolean parameter to specify whether the input temperature is in Celsius or Fahrenheit, and return the converted temperature accordingly.
 
 7. Number Sign Checker:
 Write a method called checkSign that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero.
 
 8. Vowel or Consonant Checker:
-Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise. Ignore case sensitivity.
+Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise.
+Ignore case sensitivity.
 
 9. Palindrome Checker:
-Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards) and false otherwise.
+Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome
+(reads the same forwards and backwards) and false otherwise.
             }*/
     public static void main(String[] args) {
         System.out.println(isEven(5));
@@ -105,6 +132,9 @@ Write a method called isPalindrome that takes a string as input and returns true
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️calculate grade〰️〰️〰️〰️〰️〰️〰️〰️〰️");
         char grade = calculateGrade();
         System.out.println(grade);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This program checks the type of a triangle.〰️〰️〰️〰️〰️〰️");
+        String classifyTriangle =classifyTriangle();
+        System.out.println(classifyTriangle);
 
     }
 }
