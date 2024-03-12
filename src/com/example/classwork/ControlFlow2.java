@@ -112,6 +112,20 @@ public class ControlFlow2 {
         If the number is negative then the method needs to return -1 to indicate an invalid value.
         Example input/output
         sumFirstAndLastDigit(252); → should return 4, the first digit is 2 and the last is 2 which gives us 2+2 and the sum is 4.*/
+    public static void sumFirstAndLastDigit(int number){
+        int lastDigit = number % 10;
+        int firstDigit = 0;
+        if (number < 0){
+            System.out.println(-1);
+        }else{
+            while (number > 0){
+                firstDigit = number % 10;
+                number /= 10;
+            }
+            System.out.println(firstDigit + lastDigit);
+        }
+
+    }
 
 
 /*                4. Greatest Common Divisor
@@ -152,6 +166,8 @@ isLeapYear(2000); → should return true because 2000 is a leap year*/
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This program checks leap year");
         boolean isLeapYear = isLeapYear(2022);
         System.out.println(isLeapYear);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This program sums the first and the last numbers of a given number");
+        sumFirstAndLastDigit(252);
 
     }
 }
