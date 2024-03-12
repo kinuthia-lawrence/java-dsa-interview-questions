@@ -43,11 +43,58 @@ public class ControlFlow {
         }else{
             return false;
         }
+    }
+    /*4. Grading System:
+    Write a method called calculateGrade that takes a student's score as input and returns a letter grade based on the following grading scale:
+    A: 90-100
+    B: 80-89
+    C: 70-79
+    D: 60-69
+    F: Below 60*/
+    public static char calculateGrade() {
+        double score;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your score: ");
+        score = scanner.nextDouble();
+
+        // Validate input score
+        if (score < 0 || score > 100) {
+            System.out.println("Invalid Score!!");
+            return 'E'; // Return 'E' for invalid score
+        }
+
+        // Calculate grade based on score
+        if (score >= 90 && score <= 100) {
+            return 'A';
+        } else if (score >= 80 && score <= 89) {
+            return 'B';
+        } else if (score >= 70 && score <= 79) {
+            return 'C';
+        } else if (score >= 60 && score <= 69) {
+            return 'D';
+        } else {
+            return 'F';
+        }
 
     }
 
 
+             /* {
+             5. Triangle Type Checker:
+Write a method called classifyTriangle that takes the lengths of three sides of a triangle as input and returns a string indicating the type of triangle (equilateral, isosceles, scalene) or if the inputs do not form a valid triangle.
 
+6. Temperature Converter:
+Write a method called convertTemperature that takes a temperature in Celsius as input and converts it to Fahrenheit. Include an optional boolean parameter to specify whether the input temperature is in Celsius or Fahrenheit, and return the converted temperature accordingly.
+
+7. Number Sign Checker:
+Write a method called checkSign that takes an integer as input and returns a string indicating whether the number is positive, negative, or zero.
+
+8. Vowel or Consonant Checker:
+Write a method called isVowel that takes a character as input and returns true if the character is a vowel and false otherwise. Ignore case sensitivity.
+
+9. Palindrome Checker:
+Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards) and false otherwise.
+            }*/
     public static void main(String[] args) {
         System.out.println(isEven(5));
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️Find the largest Number〰️〰️〰️〰️〰️〰️〰️〰️");
@@ -55,6 +102,9 @@ public class ControlFlow {
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️checks leap year〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️");
         boolean result=isLeapYear();
         System.out.println(result);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️calculate grade〰️〰️〰️〰️〰️〰️〰️〰️〰️");
+        char grade = calculateGrade();
+        System.out.println(grade);
 
     }
 }
