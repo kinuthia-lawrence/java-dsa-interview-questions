@@ -128,7 +128,7 @@ public class ControlFlow2 {
     }
 
 
-/*                4. Greatest Common Divisor
+/*4. Greatest Common Divisor
         Write a method named getGreatestCommonDivisor with two parameters of type int named first and second.
             If one of the parameters is < 10, the method should return -1 to indicate an invalid value.
             The method should return the greatest common divisor of the two numbers (int).
@@ -137,17 +137,20 @@ public class ControlFlow2 {
                     12 can be divided by 1, 2, 3, 4, 6, 12
                     30 can be divided by 1, 2, 3, 5, 6, 10, 15, 30
             The greatest common divisor is 6 since both 12 and 30 can be divided by 6, and there is no resulting remainder.
-                    4.Greatest Common Divisor
-        Write a method named getGreatestCommonDivisor with two parameters of type int named first and second.
-            If one of the parameters is < 10, the method should return -1 to indicate an invalid value.
-            The method should return the greatest common divisor of the two numbers (int).
-            The greatest common divisor is the largest positive integer that can fully divide each of the integers (i.e. without leaving a remainder).
-            For example 12 and 30:
-                    12 can be divided by 1, 2, 3, 4, 6, 12
-
-                30 can be divided by 1, 2, 3, 5, 6, 10, 15, 30
-        The greatest common divisor is 6 since both 12 and 30 can be divided by 6, and there is no resulting remainder.
         */
+    public static int getGreatestCommonDivisor(int first, int second){
+        if (first < 10 || second < 10){
+            return -1;
+        }else{
+            int gcd = 1;
+            for (int i = 1; i <= first && i <= second; i++){
+                if (first % i == 0 && second % i == 0){
+                    gcd = i;
+                }
+            }
+            return gcd;
+        }
+    }
 
     /*    5. Number Of Days In Month
 Write a method isLeapYear with a parameter of type int named year.
@@ -167,7 +170,11 @@ isLeapYear(2000); → should return true because 2000 is a leap year*/
         boolean isLeapYear = isLeapYear(2022);
         System.out.println(isLeapYear);
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This program sums the first and the last numbers of a given number");
-        sumFirstAndLastDigit(252);
+        sumFirstAndLastDigit(352);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This program returns the gcd of two numbers");
+        int gcd = getGreatestCommonDivisor(12,30);
+        System.out.println(gcd);
+
 
     }
 }
