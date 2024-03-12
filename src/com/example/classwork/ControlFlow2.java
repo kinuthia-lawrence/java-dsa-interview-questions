@@ -149,5 +149,9 @@ isLeapYear(2000); → should return true because 2000 is a leap year*/
     public static void main(String[] args) {
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This is the print number in Words");
         printNumberInWord(-3);
+        System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️This program checks leap year");
+        boolean isLeapYear = isLeapYear(2022);
+        System.out.println(isLeapYear);
+
     }
 }
