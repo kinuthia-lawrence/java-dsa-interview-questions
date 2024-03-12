@@ -164,14 +164,27 @@ public class ControlFlow {
         }
         return false;
     }
+/*9. c Checker:
+    Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome
+            (reads the same forwards and backwards) and false otherwise.*/
+    public static boolean isPalindrome(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+        str = str.toLowerCase();
+        int length = str.length();
+        for(int i = 0; i < length/2; i++){
+            if(str.charAt(i) != str.charAt(length - i - 1)){
+                return false;
+            }
+        }
+        return true;
+    }
 
-             /* {
 
 
-9. Palindrome Checker:
-Write a method called isPalindrome that takes a string as input and returns true if the string is a palindrome
-(reads the same forwards and backwards) and false otherwise.
-            }*/
+
+           //THIS IS THE START OF THE MAIN METHOD.
     public static void main(String[] args) {
         System.out.println(isEven(5));
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️Find the largest Number〰️〰️〰️〰️〰️〰️〰️〰️");
@@ -195,6 +208,8 @@ Write a method called isPalindrome that takes a string as input and returns true
         boolean isVowel = isVowel();
         System.out.println(isVowel);
         System.out.println("〰️〰️〰️〰️〰️〰️〰️〰️This is a palindrome checker〰️〰️〰️〰️〰️〰️");
+        boolean isPalindrome = isPalindrome();
+        System.out.println(isPalindrome);
 
 
 
