@@ -126,6 +126,20 @@ public class ControlFlow2 {
         }
 
     }
+/*implement the above method by taking a number and first converting it to string and then to char array
+        then get the first and last element of the array and convert them to int and add them together and return the sum
+        * */
+    public static int sumFirstAndLastDigit2(int number){
+        //convert to string
+        String num = Integer.toString(number);
+        //convert to char array
+        char[] numArray = num.toCharArray();
+
+        int firstDigit = Character.getNumericValue(numArray[0]);
+        int lastDigit = Character.getNumericValue(numArray[numArray.length - 1]);
+        return firstDigit + lastDigit;
+    }
+
 
 
 /*4. Greatest Common Divisor
