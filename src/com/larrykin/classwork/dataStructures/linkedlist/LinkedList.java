@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.linkedlist;
+package com.larrykin.classwork.dataStructures.linkedlist;
 
 public class LinkedList<T, U> {
     //? reference to the head of the linked list

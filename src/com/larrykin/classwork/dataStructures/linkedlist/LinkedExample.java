@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.linkedlist;
+package com.larrykin.classwork.dataStructures.linkedlist;
 
 import java.util.LinkedList;
 

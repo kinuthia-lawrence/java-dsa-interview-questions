@@ -1,20 +1,22 @@
 package com.larrykin.classwork.practice;
 
+import java.util.Arrays;
+
 public class ReverseArray {
     public static void main(String[] args) {
         // Initialize an array of integers
-        int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        // Print the array to the console
-        System.out.println(arr1.toString());
+        int[] arr1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        reverseArray(arr1);
     }
 
-    public static void reversedArray(int[] arr) {
+    public static void reverseArray(int[] arr) {
         // Initialize start and end pointers
         int start = 0;
         int end = arr.length - 1;
 
-        // Loop until start is less than end
-        while(start < end) {
+        // Loop through the array while start is less than end
+        while (start < end) {
             // Swap the elements at start and end positions
             int temp = arr[start];
             arr[start] = arr[end];
@@ -23,5 +25,6 @@ public class ReverseArray {
             start++;
             end--;
         }
+        System.out.println(Arrays.toString(arr));
     }
 }

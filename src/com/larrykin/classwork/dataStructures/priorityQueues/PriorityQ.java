@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.priorityQueues;
+package com.larrykin.classwork.dataStructures.priorityQueues;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

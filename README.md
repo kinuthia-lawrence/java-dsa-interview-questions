@@ -37,7 +37,7 @@ Navigate to the project directory and compile the Java files using your preferre
 For example, to compile and run the `EvenOddNumbers` class:
 
 ```sh
-cd java-dsa-interview-questions
+cd java-dataStructures-interview-questions
 javac src/com/larrykin/classwork/EvenOddNumbers.java
 java -cp src com.larrykin.classwork.EvenOddNumbers
 ```

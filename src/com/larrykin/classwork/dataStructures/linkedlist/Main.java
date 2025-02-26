@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.linkedlist;
+package com.larrykin.classwork.dataStructures.linkedlist;
 
 public class Main {
     public static void main(String[] args) {

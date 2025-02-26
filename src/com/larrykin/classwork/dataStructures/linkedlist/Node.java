@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.linkedlist;
+package com.larrykin.classwork.dataStructures.linkedlist;
 
 /** A generic node class to represent a linked list that contains nodes with data items of type String that contains the
 name of a county and type double that contains a population index*/

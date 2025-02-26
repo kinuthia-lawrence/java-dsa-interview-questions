@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.queues;
+package com.larrykin.classwork.dataStructures.queues;
 
 import java.util.LinkedList;
 import java.util.Queue;

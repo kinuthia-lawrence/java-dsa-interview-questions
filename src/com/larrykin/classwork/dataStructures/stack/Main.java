@@ -1,4 +1,4 @@
-package com.larrykin.classwork.dsa.stack;
+package com.larrykin.classwork.dataStructures.stack;
 
 import java.util.Stack;
 
