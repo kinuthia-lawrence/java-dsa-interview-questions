@@ -8,7 +8,7 @@ public class RotateArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7};
         solution1(array, 3); // Intermediate Array
-        solution2(array, 3); // Bubble Rotate
+        solution2(array, 7); // Bubble Rotate
         solution3(array, 3); // Reversal
     }
 
@@ -45,11 +45,64 @@ public class RotateArray {
 
     }
 
-    private static void solution2(int[] nums, int k) {
-        System.out.printf("length:: %d%n", nums.length);
+    private static void solution2(int[] nums, int order) {
+        /*like a bubble sort.
+         *  O(1) space, time O(n*k).
+         * */
+        if (nums == null || order < 0) {
+            throw new IllegalArgumentException("Illegal arguments!");
+        }
+
+        for (int i = 0; i < order; i++) {
+            for (int j = nums.length - 1; j > 0; j--) {
+                int temp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = temp;
+            }
+        }
+
+        //printing
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
     }
 
-    private static void solution3(int[] nums, int k) {
+    private static void solution3(int[] nums, int order) {
+        /*Assuming we are given 1,2,3,4,5,6 and order 2.The basic idea is:
+ 1.Divide the array two parts: 1,2,3,4 and 5,6
+ 2.Rotate first part: 4,3,2,1,5,6
+ 3.Rotate second part: 4,3,2,1,6,5
+ 4.Rotate the whole array: 5,6,1,2,3,4
+ * O(1) space and O(n)time.
+ */
+//        order = order % nums.length;
+        if (nums == null || order < 0) {
+            throw new IllegalArgumentException("Illegal arguments");
+        }
+
+        //first part of array
+        int fPart = nums.length - order;
+
+        reverseNums(nums, 0, fPart - 1);
+        reverseNums(nums, fPart, nums.length - 1);
+        reverseNums(nums, 0, nums.length - 1);
+    }
+
+    private static void reverseNums(int[] nums, int left, int right) {
+        if (nums == null || nums.length == 1) return;
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+
     }
 
 }
