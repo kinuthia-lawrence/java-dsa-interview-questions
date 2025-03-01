@@ -1,4 +1,4 @@
-package com.larrykin.classwork;
+package com.larrykin.classwork.practice;
 
 import java.util.Scanner;
 

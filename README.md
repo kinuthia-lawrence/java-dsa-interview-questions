@@ -39,7 +39,7 @@ For example, to compile and run the `EvenOddNumbers` class:
 ```sh
 cd java-dataStructures-interview-questions
 javac src/com/larrykin/classwork/EvenOddNumbers.java
-java -cp src com.larrykin.classwork.EvenOddNumbers
+java -cp src com.larrykin.classwork.practice.EvenOddNumbers
 ```
 
 ## Contributing
