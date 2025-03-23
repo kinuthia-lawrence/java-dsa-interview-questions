@@ -7,8 +7,8 @@ public class SmallestValue {
 
     }
 
-    //finding the smallest value in an array
-//    Runtime complexity of 0(n)
+    // finding the smallest value in an array
+    // Runtime complexity of 0(n)
     private static int findTheSmallestValue(int[] array) {
         /*steps
          * create a variable and store the first element in the array.
