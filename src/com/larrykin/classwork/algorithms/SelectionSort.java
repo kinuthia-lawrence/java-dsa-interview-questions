@@ -1,11 +1,14 @@
 package com.larrykin.classwork.algorithms;
 
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 /**
  * The Selection Sort algorithm finds the lowest value in an array and moves it to the front of the array.
  */
 public class SelectionSort {
+
+    static Logger logger = Logger.getLogger(SelectionSort.class.getName());
 
     /**
      * Entry point of the application
@@ -14,8 +17,8 @@ public class SelectionSort {
      */
     public static void main(String[] args) {
         int[] arr = new int[]{7, 12, 9, 11, 3};
-        System.out.println("ASC " + Arrays.toString(sort(arr, "ASC")));
-        System.out.println("ASC " + Arrays.toString(sort(arr, "DESC")));
+        logger.info("ASC " + Arrays.toString(sort(arr, "ASC")));
+        logger.info("DESC " + Arrays.toString(sort(arr, "DESC")));
     }
 
     /**
