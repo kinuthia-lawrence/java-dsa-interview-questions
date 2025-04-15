@@ -12,7 +12,7 @@ public class Quicksort {
     static Logger logger = Logger.getLogger(Quicksort.class.getName());
 
     public static void main(String[] args) {
-        int[] arr = new int[]{};
+        int[] arr = new int[]{11, 9, 12, 7, 3};
         logger.log(Level.INFO, "ASC {0}", Arrays.toString(sort(arr, "ASC")));
         logger.log(Level.INFO, "DESC {0}", Arrays.toString(sort(arr, "DESC")));
     }
