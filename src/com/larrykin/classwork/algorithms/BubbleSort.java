@@ -97,11 +97,9 @@ public class BubbleSort {
         return arr;
     }
 
-
     /**
      * Optimized Solutions
      * Sorts an array of integers in ascending or descending order
-     *
      * @param arr   an array of integers
      * @param order the order in which to sort the array [ASC for ascending, DESC for descending]
      * @return an array of integers sorted in ascending or descending order
