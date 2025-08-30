@@ -1,13 +1,15 @@
 package com.larrykin.classwork.patterns;
 
-public class RightSidedTriangle {
+public class HillPattern {
     public static void main(String[] args) {
+
         /**
-         * This triangle has one decreasing triangle(spaces) and one increasing triangle(characters)
-         *        *
-         *      * *
-         *    * * *
+         * Hill pattern has one decreasing( spaces) triangle and two increasing triangles(characters)
+         *     *
+         *    * *
+         *   * * *
          *  * * * *
+         * * * * * *
          */
         int n = 5;
         long start1 = System.nanoTime();
@@ -19,35 +21,31 @@ public class RightSidedTriangle {
         method2(n);
         long end2 = System.nanoTime();
         System.out.println("Method2 time:: " + (end2 - start2) + " ns");
-
     }
 
-    /**
-     * This method uses two triangles.
-     */
     static void method1(int n) {
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
+        for (int row = 0; row < n; row++) {
+            for (int space = 0; space < n - row; space++) {
                 System.out.print("  ");
             }
-            for (int j = 0; j < i+1; j++) {
+            for (int col = 0; col <= row; col++) {
+                System.out.print("* ");
+            }
+            for (int col = 1; col <= row; col++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
+
+
     }
 
-    /**
-     * This method is achieved by determining a formula that is used in the pattern
-     *
-     */
     static void method2(int n) {
         for (int row = 0; row < n; row++) {
-            int noOfSpaces = n - row;
-            for (int space = 0; space < noOfSpaces; space++) {
+            for (int space = 0; space < n - row; space++) {
                 System.out.print("  ");
             }
-            for (int col = 0; col < row+1; col++) {
+            for (int col = 0; col < 2 * (row + 1) - 1; col++) {
                 System.out.print("* ");
             }
             System.out.println();

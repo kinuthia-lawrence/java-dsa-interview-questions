@@ -1,14 +1,14 @@
 package com.larrykin.classwork.patterns;
 
-public class RightSidedTriangle {
+public class RightSidedDecreasingTriangle {
     public static void main(String[] args) {
         /**
-         * This triangle has one decreasing triangle(spaces) and one increasing triangle(characters)
-         *        *
-         *      * *
-         *    * * *
-         *  * * * *
-         */
+         * This pattern has two triangles.
+         *  ****
+         *   ***
+         *    **
+         *     *
+         * */
         int n = 5;
         long start1 = System.nanoTime();
         method1(n);
@@ -19,35 +19,27 @@ public class RightSidedTriangle {
         method2(n);
         long end2 = System.nanoTime();
         System.out.println("Method2 time:: " + (end2 - start2) + " ns");
-
     }
 
-    /**
-     * This method uses two triangles.
-     */
     static void method1(int n) {
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
+        for (int row = 0; row < n; row++) {
+            for (int space = 0; space < row; space++) {
                 System.out.print("  ");
             }
-            for (int j = 0; j < i+1; j++) {
+            for (int col = row; col < n; col++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
+
     }
 
-    /**
-     * This method is achieved by determining a formula that is used in the pattern
-     *
-     */
     static void method2(int n) {
         for (int row = 0; row < n; row++) {
-            int noOfSpaces = n - row;
-            for (int space = 0; space < noOfSpaces; space++) {
+            for (int space = 0; space < row; space++) {
                 System.out.print("  ");
             }
-            for (int col = 0; col < row+1; col++) {
+            for (int col = 0; col < n - row; col++) {
                 System.out.print("* ");
             }
             System.out.println();

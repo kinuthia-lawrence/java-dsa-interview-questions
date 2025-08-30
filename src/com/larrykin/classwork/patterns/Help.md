@@ -9,6 +9,7 @@
 - For each row, we print the required number of columns, then we print a new line.
 - For each row, we determine the number of columns to print based on the pattern.
 - For each row, we determine the number of spaces to print based on the pattern.
+> You can also choose to find a formula for the number of stars and spaces to print for each row instead of using triangles.
 
 ## for a program to print a a square of size n
 
