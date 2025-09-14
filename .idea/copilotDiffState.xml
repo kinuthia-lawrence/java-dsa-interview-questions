@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BacktrackingTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BacktrackingTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Backtracking Technique&#10; * Used for solving constraint satisfaction problems (e.g., permutations, combinations).&#10; */&#10;public class BacktrackingTechnique {&#10;    public static void permute(String str, String result) {&#10;        if (str.length() == 0) {&#10;            System.out.println(result);&#10;            return;&#10;        }&#10;        for (int i = 0; i &lt; str.length(); i++) {&#10;            permute(str.substring(0, i) + str.substring(i + 1), result + str.charAt(i));&#10;        }&#10;    }&#10;    public static void main(String[] args) {&#10;        permute(&quot;ABC&quot;, &quot;&quot;);&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BinarySearchTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BinarySearchTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Binary Search Technique&#10; * Efficiently finds an element in a sorted array.&#10; */&#10;public class BinarySearchTechnique {&#10;    public static int binarySearch(int[] arr, int target) {&#10;        int left = 0, right = arr.length - 1;&#10;        while (left &lt;= right) {&#10;            int mid = left + (right - left) / 2;&#10;            if (arr[mid] == target) return mid;&#10;            else if (arr[mid] &lt; target) left = mid + 1;&#10;            else right = mid - 1;&#10;        }&#10;        return -1;&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] arr = {1, 2, 3, 4, 5};&#10;        System.out.println(binarySearch(arr, 3));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BitManipulationTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/BitManipulationTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Bit Manipulation Technique&#10; * Efficiently solves problems using bitwise operations.&#10; */&#10;public class BitManipulationTechnique {&#10;    public static int countSetBits(int n) {&#10;        int count = 0;&#10;        while (n &gt; 0) {&#10;            count += n &amp; 1;&#10;            n &gt;&gt;= 1;&#10;        }&#10;        return count;&#10;    }&#10;    public static void main(String[] args) {&#10;        System.out.println(countSetBits(13)); // Output: 3&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/CircularArrayTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/CircularArrayTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Circular Array Technique&#10; * Useful for problems involving wrap-around indexing.&#10; */&#10;public class CircularArrayTechnique {&#10;    public static int nextIndex(int[] arr, int current) {&#10;        return (current + 1) % arr.length;&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] arr = {1, 2, 3, 4, 5};&#10;        System.out.println(nextIndex(arr, 4)); // Output: 0&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/DivideAndConquerTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/DivideAndConquerTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Divide and Conquer Technique&#10; * Breaks problems into smaller subproblems, solves them recursively, and combines results.&#10; */&#10;public class DivideAndConquerTechnique {&#10;    public static int max(int[] arr, int left, int right) {&#10;        if (left == right) return arr[left];&#10;        int mid = left + (right - left) / 2;&#10;        int leftMax = max(arr, left, mid);&#10;        int rightMax = max(arr, mid + 1, right);&#10;        return Math.max(leftMax, rightMax);&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] arr = {1, 5, 3, 9, 2};&#10;        System.out.println(max(arr, 0, arr.length - 1));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/DynamicProgrammingTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/DynamicProgrammingTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Dynamic Programming Technique&#10; * Solves problems by storing solutions to subproblems to avoid redundant computation.&#10; */&#10;public class DynamicProgrammingTechnique {&#10;    public static int fibonacci(int n) {&#10;        if (n &lt;= 1) return n;&#10;        int[] dp = new int[n + 1];&#10;        dp[0] = 0; dp[1] = 1;&#10;        for (int i = 2; i &lt;= n; i++) {&#10;            dp[i] = dp[i - 1] + dp[i - 2];&#10;        }&#10;        return dp[n];&#10;    }&#10;    public static void main(String[] args) {&#10;        System.out.println(fibonacci(10));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/FastSlowPointer.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/FastSlowPointer.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Fast &amp; Slow Pointer Technique&#10; * Used to detect cycles in linked lists or arrays.&#10; */&#10;public class FastSlowPointer {&#10;    public static boolean hasCycle(int[] arr) {&#10;        int slow = 0, fast = 0;&#10;        while (fast &lt; arr.length &amp;&amp; fast + 1 &lt; arr.length) {&#10;            slow++;&#10;            fast += 2;&#10;            if (slow == fast) return true;&#10;        }&#10;        return false;&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] arr = {1, 2, 3, 4, 5};&#10;        System.out.println(hasCycle(arr));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/GreedyTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/GreedyTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Greedy Technique&#10; * Makes the locally optimal choice at each step.&#10; */&#10;public class GreedyTechnique {&#10;    public static int coinChange(int[] coins, int amount) {&#10;        int count = 0;&#10;        for (int i = coins.length - 1; i &gt;= 0; i--) {&#10;            while (amount &gt;= coins[i]) {&#10;                amount -= coins[i];&#10;                count++;&#10;            }&#10;        }&#10;        return count;&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] coins = {1, 5, 10, 25};&#10;        System.out.println(coinChange(coins, 37));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/RecursionTechnique.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/RecursionTechnique.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Recursion Technique&#10; * Solves problems by breaking them into smaller subproblems.&#10; */&#10;public class RecursionTechnique {&#10;    public static int factorial(int n) {&#10;        if (n &lt;= 1) return 1;&#10;        return n * factorial(n - 1);&#10;    }&#10;    public static void main(String[] args) {&#10;        System.out.println(factorial(5));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/SlidingWindow.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/larrykin/classwork/algorithm_techniques/SlidingWindow.java" />
+              <option name="updatedContent" value="package com.larrykin.classwork.algorithm_techniques;&#10;&#10;/**&#10; * Sliding Window Technique&#10; * Used to solve problems involving subarrays or substrings with optimal time complexity.&#10; */&#10;public class SlidingWindow {&#10;    public static int maxSum(int[] arr, int k) {&#10;        int max = 0, sum = 0;&#10;        for (int i = 0; i &lt; arr.length; i++) {&#10;            sum += arr[i];&#10;            if (i &gt;= k) sum -= arr[i - k];&#10;            if (i &gt;= k - 1) max = Math.max(max, sum);&#10;        }&#10;        return max;&#10;    }&#10;    public static void main(String[] args) {&#10;        int[] arr = {1, 2, 3, 4, 5};&#10;        System.out.println(maxSum(arr, 3));&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
